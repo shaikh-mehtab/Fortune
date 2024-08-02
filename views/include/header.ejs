@@ -1,0 +1,197 @@
+<header>
+  <nav
+    class="navbar navbar-expand-lg header-transparent bg-transparent disable-fixed"
+  >
+    <div class="container-fluid">
+      <div class="col-auto col-lg-2 me-lg-0 me-auto d-none d-lg-flex">
+        <div class="header-icon">
+          <div class="header-social-icon icon social-text-style-01">
+            <a class="facebook" href="https://www.facebook.com/" target="_blank"
+              ><i class="bi-facebook"></i
+            ></a>
+            <a class="twitter" href="https://www.instagram.com/" target="_blank"
+              ><i class="bi-instagram"></i
+            ></a>
+            <a class="behance" href="https://www.twitter.com/" target="_blank"
+              ><i class="bi-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <a class="navbar-brand" href="/">
+          <img
+            src="/api/transform/<%=JSON.parse(footerData.store_setting[0].logo1) %>"
+            height=""
+            width=""
+            alt="logo"
+          />
+        </a>
+      </div>
+      <div class="col-auto col-lg-2 text-end">
+        <div class="header-icon header-push-button hamburger-push-button icon">
+          <div class="push-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div
+    class="push-menu hamburger-nav hamburger-menu-simple header-dark bg-dark-gray background-position-center-top"
+    style="background-image: url('/images/vertical-line-bg-small.svg')"
+  >
+    <span class="close-menu text-dark-gray text-dark-gray-hover bg-white"
+      ><i class="fa-solid fa-xmark"></i
+    ></span>
+    <div class="container h-100">
+      <div class="row align-items-center justify-content-center h-100">
+        <div
+          class="col-lg-8 col-md-6 order-2 order-md-1 d-none d-md-inline-block"
+        >
+          <a class="hamburger-logo d-inline-block" href="/">
+            <img
+              src="/api/transform/<%=JSON.parse(footerData.store_setting[0].logo1) %>"
+              data-at2x="/api/transform/<%=JSON.parse(footerData.store_setting[0].logo1) %>"
+              class="w-auto"
+              alt
+            />
+          </a>
+          <div class="row mt-22 md-mt-30px sm-mt-25px align-items-start">
+            <div
+              class="col-lg-4 last-paragraph-no-margin md-mb-30px sm-mb-20px menu-address"
+            >
+              <span
+                class="text-base-color fs-14 fw-600 ls-2px text-uppercase mb-5px d-block"
+                >Let's meet</span
+              >
+              <p class="w-90 md-w-80"><%= addresses.data[0].address %></p>
+            </div>
+
+            <div
+              class="col-lg-5 last-paragraph-no-margin md-mb-30px sm-mb-20px menu-address"
+            >
+              <span
+                class="text-base-color fs-14 fw-600 ls-2px text-uppercase mb-5px d-block"
+                >Let's talk</span
+              >
+              <a
+                href="tel:<%= addresses.data[0].phone_no %>"
+                class="text-white-hover"
+                >+91 <%= addresses.data[0].phone_no %></a
+              ><br />
+              <a
+                href="email: <%= addresses.data[0].email %>"
+                class="text-decoration-line-bottom text-white"
+                ><span
+                  class="__cf_email__"
+                  data-cfemail="e78e898188a79e88929583888a868e89c984888a"
+                  ><%= addresses.data[0].email %></span
+                ></a
+              >
+            </div>
+
+            <div class="col-lg-3 last-paragraph-no-margin elements-social">
+              <span
+                class="text-base-color fs-14 fw-600 ls-2px text-uppercase mb-5px d-block"
+                >Connect with us</span
+              >
+              <div class="social-icon-style-02 mt-15px">
+                <ul class="medium-icon light">
+                  <li>
+                    <a
+                      class="facebook"
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dribbble"
+                      href="http://www.dribbble.com/"
+                      target="_blank"
+                      ><i class="fa-brands fa-dribbble"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="twitter"
+                      href="https://www.twitter.com/"
+                      target="_blank"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="instagram"
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-3 col-md-5 offset-md-1 order-1 order-md-2 text-center text-md-start"
+        >
+          <div
+            class="hamburger-menu menu-list-wrapper"
+            data-scroll-options='{ "theme": "light" }'
+          >
+            <ul class="menu-item-list alt-font ls-minus-05px p-0">
+              <li class="menu-item">
+                <a href="/" class="nav-link">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="/about" class="nav-link">About</a>
+              </li>
+              <li class="menu-item">
+                <a href="/projects" class="nav-link">Projects</a>
+              </li>
+              <li class="menu-item">
+                <a href="/blogs" class="nav-link">Blogs</a>
+              </li>
+              <li class="menu-item">
+                <a href="/buyers-guide" class="nav-link">Buyers Guide</a>
+              </li>
+              <li class="menu-item">
+                <a href="/career" class="nav-link">Career</a>
+              </li>
+              <li class="menu-item">
+                <a href="/contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-12 menu-text border-top border-color-transparent-white-light d-none d-md-inline-block text-center pt-3 pb-3 order-3"
+        >
+          <h6 class="fw-400 d-inline-block align-middle mb-0">
+            Let's build something
+            <span class="text-white">great together</span>
+          </h6>
+          <div
+            class="separator-line-1px d-inline-block align-middle ms-20px me-20px mt-5px w-70px bg-base-color"
+          ></div>
+          <a
+            href="email: <%= addresses.data[0].email %>"
+            class="text-base-color fs-26 fw-500 d-inline-block align-middle"
+            ><span
+              class="__cf_email__"
+              data-cfemail="3f575a5353507f5c4d5e594b50115c5052"
+              ><%= addresses.data[0].email %></span
+            ></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

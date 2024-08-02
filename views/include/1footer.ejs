@@ -1,0 +1,228 @@
+<footer
+class="bg-nero-grey pb-0 pt-4 md-pt-6 sm-pt-9 xs-pt-11 background-position-center-top"
+style="
+  background-image: url('images/demo-architecture-dotted-pattern.svg');
+"
+>
+<div class="container">
+  <div class="row align-items-center mb-3 md-mb-5 xs-mb-8">
+    <div class="col-sm-10 text-center text-sm-start order-2 order-sm-1">
+      <h6 class="fw-400 d-inline-block align-middle mb-0">
+       Experience
+        <span class="text-white">Excellence</span>
+      </h6>
+      <div
+        class="separator-line-1px d-none d-sm-inline-block align-middle ms-20px me-20px lg-ms-10px lg-me-10px mt-5px w-70px lg-w-50px bg-base-color"
+      ></div>
+    </div>
+    <div
+      class="col-sm-2 text-center text-sm-end order-1 order-sm-2 xs-mb-15px"
+    >
+      <a href="/" class="footer-logo d-inline-block"
+        ><img
+          src="/api/transform/<%=JSON.parse(footerData.store_setting[0].logo1) %>"
+          data-at2x="images/demo-architecture-footer-logo@2x.png"
+          alt
+      /></a>
+    </div>
+  </div>
+  <div class="row mb-6 xs-mb-9">
+     
+    <% addresses.data.forEach(addr=>{ %>
+      <div
+      class="col-lg-5 col-sm-6 last-paragraph-no-margin text-center text-sm-start md-mb-30px"
+    >
+      <span class="text-white d-block fs-12 fw-600 ls-2px text-uppercase"
+        ><%= addr.name %></span
+      >
+      <p
+        class="w-80 lg-w-95 md-w-70 sm-w-85 xs-mx-auto text-medium-gray fs-15 lh-28"
+      >
+        <%= addr.address %>
+      </p>
+    </div>
+   <% }) %>
+   
+
+    <div
+      class="col-lg-4 col-sm-6 last-paragraph-no-margin ms-auto  fs-19"
+    >
+      <a href="tel:1235678901" class="text-white">+91 <%= addresses.data[0].phone_no %></a><br />
+      <a href="email:<%= addresses.data[0].email %>" class="text-white"> <%= addresses.data[0].email %></a><br />
+
+    </div>
+  </div>
+</div>
+<div
+  class="footer-bottom p-20px border-top border-color-transparent-white-light"
+>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 text-center text-lg-start md-mb-10px">
+        <ul class="footer-navbar fs-15 lh-normal">
+          <li class="nav-item active">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/about" class="nav-link"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="demo-architecture-services.html" class="nav-link"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/projects" class="nav-link"
+              >Projects</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/contact" class="nav-link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-5 text-center text-lg-end">
+        <span class="fs-15"
+          >&copy; 2024 Fortune-Dreamcon is Proudly Powered by
+          <a
+            href="https://www.cometdigisol.com/"
+            target="_blank"
+            class="text-decoration-line-bottom text-white"
+            >Comet Digisol</a
+          ></span
+        >
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+<div class="scroll-progress d-none d-xxl-block">
+<a href="#" class="scroll-top" aria-label="scroll">
+  <span class="scroll-text">Scroll</span
+  ><span class="scroll-line"><span class="scroll-point"></span></span>
+</a>
+</div>
+
+<script
+data-cfasync="false"
+src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/vendors.min.js"></script>
+<script
+type="text/javascript"
+src="/revolution/js/jquery.themepunch.tools.min.js"
+></script>
+<script
+type="text/javascript"
+src="/revolution/js/jquery.themepunch.revolution.min.js"
+></script>
+
+<script type="text/javascript">
+/* https://learn.jquery.com/using-jquery-core/document-ready/ */
+jQuery(document).ready(function () {
+  /* initialize the slider based on the Slider's ID attribute from the wrapper above */
+  jQuery("#architecture-slider")
+    .show()
+    .revolution({
+      sliderType: "standard",
+      /* options are 'auto', 'fullwidth' or 'fullscreen' */
+      sliderLayout: "fullscreen",
+      /* sets the Slider's default timeline */
+      delay: 9000,
+      /* options that disable autoplay */
+      stopLoop: "off",
+      stopAfterLoops: 0,
+      stopAtSlide: 1,
+      navigation: {
+        keyboardNavigation: "on",
+        keyboard_direction: "horizontal",
+        mouseScrollNavigation: "off",
+        mouseScrollReverse: "default",
+        onHoverStop: "off",
+        touch: {
+          touchenabled: "on",
+          touchOnDesktop: "on",
+          swipe_threshold: 75,
+          swipe_min_touches: 1,
+          swipe_direction: "horizontal",
+          drag_block_vertical: true,
+        },
+        arrows: {
+          enable: false,
+          style: "ares",
+          tmp: '<div class="tp-title-wrap"><span class="tp-arr-titleholder">{{title}}</span></div>',
+          rtl: false,
+          hide_onleave: false,
+          hide_onmobile: true,
+          hide_under: 0,
+          hide_over: 9999,
+          hide_delay: 200,
+          hide_delay_mobile: 1200,
+          left: {
+            container: "slider",
+            h_align: "left",
+            v_align: "center",
+            h_offset: 0,
+            v_offset: 0,
+          },
+          right: {
+            container: "slider",
+            h_align: "right",
+            v_align: "center",
+            h_offset: 0,
+            v_offset: 0,
+          },
+        },
+      },
+
+      responsiveLevels: [1240, 1024, 778, 480],
+      /* [DESKTOP, LAPTOP, TABLET, SMARTPHONE] */
+      gridwidth: [1190, 1024, 778, 480],
+      /* [DESKTOP, LAPTOP, TABLET, SMARTPHONE] */
+      gridheight: [900, 920, 700, 650],
+      /* Lazy Load options are "all", "smart", "single" and "none" */
+      lazyType: "smart",
+      spinner: "spinner0",
+      parallax: {
+        type: "mouse+scroll",
+        origo: "enterpoint",
+        speed: 400,
+        speedbg: 1500,
+        speedls: 1000,
+        levels: [
+          5, 10, 15, 20, 25, 30, 35, 40, 60, 46, -10, -15, -20, -25, -30,
+          55,
+        ],
+      },
+      shadow: 0,
+      shuffle: "off",
+      autoHeight: "off",
+      fullScreenAutoWidth: "off",
+      fullScreenAlignForce: "off",
+      fullScreenOffsetContainer: "",
+      fullScreenOffset: "",
+      disableProgressBar: "on",
+      hideThumbsOnMobile: "on",
+      hideSliderAtLimit: 0,
+      hideCaptionAtLimit: 0,
+      hideAllCaptionAtLilmit: 0,
+      debugMode: false,
+      fallbacks: {
+        simplifyAll: "off",
+        nextSlideOnWindowFocus: "off",
+        disableFocusListener: false,
+      },
+    });
+});
+</script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+<!-- Mirrored from craftohtml.themezaa.com// by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Apr 2024 09:14:17 GMT -->
+</html>

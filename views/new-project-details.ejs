@@ -1,0 +1,944 @@
+﻿<%- include('include/head') %>
+
+    <body class="custom-cursor overflow-x-hidden text-white " data-mobile-nav-style="classic">
+        <div class="cursor-page-inner">
+            <div class="circle-cursor circle-cursor-inner"></div>
+            <div class="circle-cursor circle-cursor-outer"></div>
+        </div>
+
+        <%- include('include/header') %>
+
+            <link rel="stylesheet" href="/demos/real-estate/real-estate.css" />
+            <style>
+                :root{
+                    --base-color:#efff02
+                }
+            </style>
+
+
+            <section class="bg-nero-grey  page-title-big-typography ipad-top-space-margin"    style="
+      background-image: url('/api/transform/<%= JSON.parse(project.cover_url)[0] %>');
+    ">
+                <div class="container">
+                    <div
+                        class="row align-items-center align-items-lg-end justify-content-center extra-very-small-screen g-0">
+                        <div class="col-xl-7 col-lg-8 position-relative page-title-extra-small md-mb-30px md-mt-auto"
+                            data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                            <h3 class="alt-font fw-600  mb-15px ls-minus-1px">Vacation cottage in
+                                brownsville</h3>
+                            <h1 class="mb-0 d-flex"><i
+                                    class="feather icon-feather-map-pin icon-extra-medium text-base-color me-5px"></i>4403
+                                Pick street plensant view, New york</h1>
+                        </div>
+                        <div
+                            class="col-lg-3 offset-xl-2 offset-lg-1 border-start border-2 border-color-base-color ps-40px sm-ps-25px md-mb-auto">
+                            <h4 class=" fw-700 alt-font mb-5px">$5,40,000</h4>
+                            <span class="fw-500 fs-18">$3,700 - Per sq. ft.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="p-0 bg-nero-grey  overflow-hidden">
+                <div class="container-fluid p-0">
+                    <div class="row row-cols-1 justify-content-center">
+
+                        <div class="col">
+                            <div class="swiper magic-cursor slider-four-slide swiper-dark-pagination swiper-pagination-style-3"
+                                data-slider-options="{ &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 20, &quot;loop&quot;: true, &quot;pagination&quot;: { &quot;el&quot;: &quot;.slider-four-slide-pagination&quot;, &quot;clickable&quot;: true }, &quot;autoplay&quot;: { &quot;delay&quot;: 3000, &quot;disableOnInteraction&quot;: false }, &quot;navigation&quot;: { &quot;nextEl&quot;: &quot;.slider-one-slide-next-1&quot;, &quot;prevEl&quot;: &quot;.slider-one-slide-prev-1&quot; }, &quot;keyboard&quot;: { &quot;enabled&quot;: true, &quot;onlyInViewport&quot;: true }, &quot;breakpoints&quot;: { &quot;1200&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;992&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;768&quot;: { &quot;slidesPerView&quot;: 2 } }, &quot;effect&quot;: &quot;slide&quot; }">
+                                <div class="swiper-wrapper">
+                                    <% JSON.parse(project.gallery_images).forEach(img=>{ %>
+                                        <div class="swiper-slide">
+                                          <img src="/api/transform/<%= img %>" class="w-100" alt />
+                                        </div>
+                                        <% }) %>
+                                y </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pt-30px bg-nero-grey pb-30px border-bottom border-color-extra">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2">
+                        <div
+                            class="col text-center border-end xs-border-end-0 border-color-extra-medium-gray alt-font md-mb-15px">
+                            <span class="fs-19  fw-600">Property size:</span> 700sq ft
+                        </div>
+                        <div
+                            class="col text-center border-end md-border-end-0 border-color-extra-medium-gray alt-font md-mb-15px">
+                            <span class="fs-19  fw-600">Year built:</span> 2016
+                        </div>
+                        <div
+                            class="col text-center border-end xs-border-end-0 border-color-extra-medium-gray alt-font sm-mb-15px">
+                            <span class="fs-19  fw-600">Accommodation:</span> Furnished
+                        </div>
+                        <div class="col text-center alt-font">
+                            <span class="fs-19  fw-600">Heating:</span> TA furnace
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="position-relative bg-nero-grey ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 md-mb-50px">
+                            <div class="row mb-15px">
+                                <div class="col-12">
+                                    <span class=" fs-24 fw-600 alt-font mb-15px d-block">Property
+                                        description</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                                        amet, consectetur adipiscing elit sed eiusmod.</p>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div
+                                    class="col bg-nero-gray p-35px lg-ps-15px lg-pe-15px border-radius-6px fs-16">
+                                    <div class="row row-cols-2 row-cols-md-4 row-cols-sm-2">
+                                        <div
+                                            class="col text-center border-end border-color-extra-medium-gray sm-mb-30px">
+                                            <img src="images/demo-real-estate-icon-bed.svg" class="w-50px mb-15px" alt>
+                                            <span class=" d-block lh-20">4 Bedrooms</span>
+                                        </div>
+                                        <div
+                                            class="col text-center border-end sm-border-end-0 border-color-extra-medium-gray sm-mb-30px">
+                                            <img src="images/demo-real-estate-icon-bath.svg" class="w-50px mb-15px" alt>
+                                            <span class=" d-block lh-20">4 Bathrooms</span>
+                                        </div>
+                                        <div class="col text-center border-end border-color-extra-medium-gray">
+                                            <img src="images/demo-real-estate-icon-car.svg" class="w-50px mb-15px" alt>
+                                            <span class=" d-block lh-20">2 Parking</span>
+                                        </div>
+                                        <div class="col text-center">
+                                            <img src="images/demo-real-estate-icon-swimming.svg" class="w-50px mb-15px"
+                                                alt>
+                                            <span class=" d-block lh-20">Swimming pool</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-7">
+                                <div class="col-12">
+                                    <span
+                                        class=" fs-24 fw-600 alt-font mb-25px d-block">Specification</span>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div
+                                        class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-08.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Property ID:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">GE-G612</div>
+                                    </div>
+                                    <div
+                                        class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-09.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Property type:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">Single Family</div>
+                                    </div>
+                                    <div
+                                        class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-12.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Property size:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">1400 Sq Ft</div>
+                                    </div>
+                                    <div
+                                        class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-15.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Cooling:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">Yes</div>
+                                    </div>
+                                    <div
+                                        class="row g-0 align-items-center lg-mb-15px lg-pb-15px lg-border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-13.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Swimming pool:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">No</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div
+                                        class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-06.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Parking:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">3 Car garage</div>
+                                    </div>
+                                    <div
+                                        class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-11.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Heating:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">Yes</div>
+                                    </div>
+                                    <div
+                                        class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-10.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Outdoor:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">Porch & Patio</div>
+                                    </div>
+                                    <div
+                                        class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-14.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Year built:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">2013</div>
+                                    </div>
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col">
+
+                                            <div
+                                                class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                                <div class="feature-box-icon me-10px">
+                                                    <img src="images/demo-real-estate-property-details-09.svg"
+                                                        class="w-25px" alt>
+                                                </div>
+                                                <div class="feature-box-content">
+                                                    <span class="">Total floors:</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">03</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-7">
+                                <div class="col-12">
+                                    <span class=" fs-24 fw-600 alt-font mb-25px d-block">Location</span>
+                                </div>
+                                <div class="col-12">
+                                    <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14961.608814065663!2d72.91057698006598!3d20.366300078750275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ce47d36ac1cf%3A0x160e276063e27a55!2sFORTUNE%20LANDMARK%20BY%20FORTUNE%20DREAM-CON%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1717580931559!5m2!1sen!2sin"
+                                    width="650" height="550" style="border: 0" allowfullscreen="true" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <div class="row mt-7">
+                                <div class="col-12">
+                                    <span class=" fs-24 fw-600 alt-font mb-15px d-block">Features</span>
+                                </div>
+                                <div class="col-6 col-sm-4">
+
+                                    <ul class="list-style-02 ps-0 mb-0">
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Refrigerator</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Gym</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Washer</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Barbeque</li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-6 col-sm-4">
+
+                                    <ul class="list-style-02 ps-0 mb-0">
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Hangers</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Microwave</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Sauna</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Dryer</li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-6 col-sm-4">
+
+                                    <ul class="list-style-02 ps-0 mb-0">
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Laundry</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Shower</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Internet</li>
+                                        <li><i class="bi bi-check-circle icon-small me-10px"></i>Outdoor</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="row mt-7">
+                                <div class="col-12">
+                                    <span class=" fs-24 fw-600 alt-font mb-25px d-block">Ground floor
+                                        plan</span>
+                                    <img src="images/demo-real-estate-property-details-16.jpg" class="border-radius-6px"
+                                        alt>
+                                </div>
+                            </div>
+                            <div class="row mt-7">
+                                <div class="col-12">
+                                    <span class=" fs-24 fw-600 alt-font mb-25px d-block">First floor
+                                        plan</span>
+                                    <img src="images/demo-real-estate-property-details-17.jpg" class="border-radius-6px"
+                                        alt>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 offset-xl-1 col-lg-5">
+                            <div class="bg-dark-gray text-white border-radius-6px position-sticky top-120px">
+                                <div
+                                    class="bg-base-color-arc border-radius-6px feature-box feature-box-left-icon-middle overflow-hidden icon-with-text-style-08 ps-35px pe-35px pt-25px pb-20px xs-p-25px">
+
+                                    <div
+                                        class="feature-box-icon feature-box-icon-rounded w-90px h-90px overflow-visible me-20px position-relative">
+                                        <img src="/images/avtar-24.jpg" class="rounded-circle" alt>
+                                        <span
+                                            class="animation-zoom d-inline-block bg-orange border border-2 border-color-white h-20px w-20px border-radius-100 position-absolute right-0px top-5px"></span>
+                                    </div>
+
+
+                                    <div class="feature-box-content last-paragraph-no-margin">
+                                        <span class="text-dark-gray alt-font fw-600 fs-20 d-block">Herman miller</span>
+                                        <div class="lh-24 d-block">
+                                            <span class="me-5px text-dark-gray opacity-8">17 property</span>
+                                            <div
+                                                class="bg-white border-radius-2px text-uppercase alt-font fw-700  fs-12 lh-24 ps-10px pe-10px d-inline-block align-middle">
+                                                Verified</div>
+                                        </div>
+                                    </div>
+
+
+                                    <div
+                                        class="elements-social social-icon-style-02 mt-5px w-100 text-start text-lg-center">
+                                        <ul class="medium-icon">
+                                            <li class="m-0"><a class="facebook text-dark-gray"
+                                                    href="https://www.facebook.com/" target="_blank"><i
+                                                        class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li class="m-0"><a class="dribbble text-dark-gray"
+                                                    href="http://www.dribbble.com/" target="_blank"><i
+                                                        class="fa-brands fa-dribbble"></i></a></li>
+                                            <li class="m-0"><a class="twitter text-dark-gray"
+                                                    href="https://www.twitter.com/" target="_blank"><i
+                                                        class="fa-brands fa-twitter"></i></a></li>
+                                            <li class="m-0"><a class="instagram text-dark-gray"
+                                                    href="https://www.instagram.com/" target="_blank"><i
+                                                        class="fa-brands fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="ps-45px pe-45px pt-35px pb-45px xs-p-25px contact-form-style-01 mt-0">
+                                    <div class="mb-20px last-paragraph-no-margin">
+                                        <p class="mb-0 alt-font fw-500 "><i
+                                                class="feather icon-feather-phone-call icon-small text-base-color me-10px"></i><span
+                                                class="fw-600 w-20 sm-w-15 xs-w-20 d-inline-block">Phone:</span><a
+                                                href="tel:12345678910" class=" text-base-color-hover">+1
+                                                234 567 8910</a></p>
+                                        <p class="alt-font fw-500 "><i
+                                                class="feather icon-feather-mail icon-small text-base-color me-10px"></i><span
+                                                class="fw-600 w-20 sm-w-15 xs-w-20 d-inline-block">Email:</span><a
+                                                href="cdn-cgi/l/email-protection.html#7f161119103f1b10121e1611511c1012"
+                                                class=" text-decoration-line-bottom"><span
+                                                    class="__cf_email__"
+                                                    data-cfemail="c6afa8a0a986a2a9aba7afa8e8a5a9ab">[email&#160;protected]</span></a>
+                                        </p>
+                                    </div>
+                                    <span class="alt-font fs-20 fw-600  d-block mb-25px">Leave your
+                                        message here</span>
+
+                                    <form action="https://craftohtml.themezaa.com/email-templates/contact-form.php"
+                                        method="post">
+                                        <div class="position-relative form-group mb-15px">
+                                            <span class="form-icon"><i class="bi bi-emoji-smile"></i></span>
+                                            <input type="text" name="name"
+                                                class="form-control border-color-white box-shadow-large required"
+                                                placeholder="Your name*" />
+                                        </div>
+                                        <div class="position-relative form-group mb-15px">
+                                            <span class="form-icon"><i class="bi bi-envelope"></i></span>
+                                            <input type="email" name="email"
+                                                class="form-control border-color-white box-shadow-large required"
+                                                placeholder="Your email address*" />
+                                        </div>
+                                        <div class="position-relative form-group mb-15px">
+                                            <span class="form-icon"><i class="bi bi-telephone-outbound"></i></span>
+                                            <input type="tel" name="phone"
+                                                class="form-control border-color-white box-shadow-large"
+                                                placeholder="Your phone" />
+                                        </div>
+                                        <div class="position-relative form-group form-textarea">
+                                            <span class="form-icon"><i class="bi bi-chat-square-dots"></i></span>
+                                            <textarea placeholder="Your message" name="comment"
+                                                class="form-control border-color-white box-shadow-large"
+                                                rows="3"></textarea>
+                                            <input type="hidden" name="redirect" value>
+                                            <button class="btn btn-small btn-round-edge btn-base-color mt-20px submit "
+                                                type="submit">Send message</button>
+                                            <div class="form-results mt-20px d-none"></div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="bg-nero-grey ">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-12 text-center">
+                            <h3 class="alt-font  fw-500 ls-minus-1px shadow-none"
+                                data-shadow-animation="true" data-animation-delay="700">Similar <span
+                                    class="fw-700 text-highlight d-inline-block">properties<span
+                                        class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-2 row-cols-md-2 justify-content-center">
+
+                        <div class="col mb-30px">
+                            <div class="border-radius-6px overflow-hidden box-shadow-large">
+                                <div class="image position-relative">
+                                    <a href="demo-real-estate-property-details.html">
+                                        <img src="images/demo-real-estate-property-01.jpg" alt>
+                                    </a>
+                                    <div
+                                        class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">
+                                        Sell</div>
+                                </div>
+                                <div class="bg-white">
+                                    <div
+                                        class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
+                                        <div class="d-flex align-items-center">
+                                            <a href="demo-real-estate-property-details.html"
+                                                class="alt-font  fw-700 fs-22 me-10px">Luxury villa in
+                                                Texas</a>
+                                        </div>
+                                        <p class="mb-20px">982 Monroe ave, rochester</p>
+                                        <div class="row g-0">
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-bed-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">04</span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Bedrooms</span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-bath-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">05</span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Bathrooms</span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-size-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">360m<sup>2</sup></span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Living area</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
+                                        <div class="col">
+                                            <a href="demo-real-estate-property-details.html"
+                                                class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View
+                                                details</a>
+                                        </div>
+                                        <div class="col text-end">
+                                            <span class="fs-24 alt-font  fw-700 mb-0">$6,89,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col mb-30px">
+                            <div class="border-radius-6px overflow-hidden box-shadow-large">
+                                <div class="image position-relative">
+                                    <a href="demo-real-estate-property-details.html">
+                                        <img src="images/demo-real-estate-property-02.jpg" alt>
+                                    </a>
+                                    <div
+                                        class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">
+                                        Rent</div>
+                                </div>
+                                <div class="bg-white">
+                                    <div
+                                        class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
+                                        <div class="d-flex align-items-center">
+                                            <a href="demo-real-estate-property-details.html"
+                                                class="alt-font  fw-700 fs-22 me-10px">Modern villa in
+                                                Oregon</a>
+                                        </div>
+                                        <p class="mb-20px">1261 Sampson street senver</p>
+                                        <div class="row g-0">
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-bed-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">05</span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Bedrooms</span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-bath-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">05</span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Bathrooms</span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-size-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">780m<sup>2</sup></span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Living area</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
+                                        <div class="col">
+                                            <a href="demo-real-estate-property-details.html"
+                                                class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View
+                                                details</a>
+                                        </div>
+                                        <div class="col text-end">
+                                            <span class="fs-24 alt-font  fw-700 mb-0">$8,50,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col mb-30px">
+                            <div class="border-radius-6px overflow-hidden box-shadow-large">
+                                <div class="image position-relative">
+                                    <a href="demo-real-estate-property-details.html">
+                                        <img src="images/demo-real-estate-property-03.jpg" alt>
+                                    </a>
+                                    <div
+                                        class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">
+                                        Sell</div>
+                                </div>
+                                <div class="bg-white">
+                                    <div
+                                        class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
+                                        <div class="d-flex align-items-center">
+                                            <a href="demo-real-estate-property-details.html"
+                                                class="alt-font  fw-700 fs-22 me-10px">Ranch style in
+                                                Florida</a>
+                                        </div>
+                                        <p class="mb-20px">2814 Hampton meadows</p>
+                                        <div class="row g-0">
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-bed-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">04</span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Bedrooms</span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-bath-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">04</span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Bathrooms</span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/demo-real-estate-icon-size-small.svg"
+                                                        class="me-5px h-20px" alt>
+                                                    <span class="fw-600 alt-font ">260m<sup>2</sup></span>
+                                                </div>
+                                                <span class="d-block lh-18 fs-15">Living area</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
+                                        <div class="col">
+                                            <a href="demo-real-estate-property-details.html"
+                                                class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View
+                                                details</a>
+                                        </div>
+                                        <div class="col text-end">
+                                            <span class="fs-24 alt-font  fw-700 mb-0">$6,50,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pt-0 pb-30px position-relative overlap-height bg-nero-grey overflow-hidden">
+                <div class="container-fluid overlap-gap-section">
+                    <div class="row justify-content-center">
+                        <div class="col-12 text-center">
+                            <h3 class="alt-font  fw-500 ls-minus-1px shadow-none"
+                                data-shadow-animation="true" data-animation-delay="700">Best review by <span
+                                    class="fw-700 text-highlight d-inline-block">happy customer<span
+                                        class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 p-0 review-style-09">
+                            <div class="swiper slider-shadow-left-right lg-slider-shadow-none magic-cursor lg-ps-15px lg-pe-15px"
+                                data-slider-options="{ &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 30, &quot;loop&quot;: true, &quot;autoplay&quot;: { &quot;delay&quot;: 2000, &quot;disableOnInteraction&quot;: false },  &quot;pagination&quot;: { &quot;el&quot;: &quot;.slider-three-slide-pagination&quot;, &quot;clickable&quot;: true, &quot;dynamicBullets&quot;: true }, &quot;navigation&quot;: { &quot;nextEl&quot;: &quot;.slider-three-slide-next&quot;, &quot;prevEl&quot;: &quot;.slider-three-slide-prev&quot; }, &quot;keyboard&quot;: { &quot;enabled&quot;: true, &quot;onlyInViewport&quot;: true }, &quot;breakpoints&quot;: { &quot;1400&quot;: { &quot;slidesPerView&quot;: 4 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3 }, &quot;768&quot;: { &quot;slidesPerView&quot;: 2 } }, &quot;effect&quot;: &quot;slide&quot; }">
+                                <div class="swiper-wrapper pt-30px pb-30px">
+
+                                    <div class="swiper-slide">
+
+                                        <div class="border-radius-10px bg-white box-shadow-double-large">
+                                            <div class="d-flex align-items-center p-40px md-p-25px">
+                                                <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px"
+                                                    src="images/avtar-25.jpg" alt />
+                                                <div>
+                                                    <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud
+                                                        dolore.</p>
+                                                    <div
+                                                        class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                                    </div>
+                                                    <span class="fw-600 alt-font  d-inline-block">Matthew
+                                                        taylor</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+
+                                        <div class="border-radius-10px bg-white box-shadow-double-large">
+                                            <div class="d-flex align-items-center p-40px md-p-25px">
+                                                <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px"
+                                                    src="images/avtar-24.jpg" alt />
+                                                <div>
+                                                    <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud
+                                                        dolore.</p>
+                                                    <div
+                                                        class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span
+                                                        class="fs-18 fw-600 alt-font  d-inline-block">Herman
+                                                        miller</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+
+                                        <div class="border-radius-10px bg-white box-shadow-double-large">
+                                            <div class="d-flex align-items-center p-40px md-p-25px">
+                                                <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px"
+                                                    src="images/avtar-26.jpg" alt />
+                                                <div>
+                                                    <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud
+                                                        dolore.</p>
+                                                    <div
+                                                        class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                                    </div>
+                                                    <span
+                                                        class="fs-18 fw-600 alt-font  d-inline-block">Jacob
+                                                        kalling</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+
+                                        <div class="border-radius-10px bg-white box-shadow-double-large">
+                                            <div class="d-flex align-items-center p-40px md-p-25px">
+                                                <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px"
+                                                    src="images/avtar-27.jpg" alt />
+                                                <div>
+                                                    <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud
+                                                        dolore.</p>
+                                                    <div
+                                                        class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span
+                                                        class="fs-18 fw-600 alt-font  d-inline-block">Alexa
+                                                        harvard</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+
+                                        <div class="border-radius-10px bg-white box-shadow-double-large">
+                                            <div class="d-flex align-items-center p-40px md-p-25px">
+                                                <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px"
+                                                    src="images/avtar-28.jpg" alt />
+                                                <div>
+                                                    <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud
+                                                        dolore.</p>
+                                                    <div
+                                                        class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span
+                                                        class="fs-18 fw-600 alt-font  d-inline-block">Jhon
+                                                        smith</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+
+                                        <div class="border-radius-10px bg-white box-shadow-double-large">
+                                            <div class="d-flex align-items-center p-40px md-p-25px">
+                                                <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px"
+                                                    src="images/avtar-25.jpg" alt />
+                                                <div>
+                                                    <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud
+                                                        dolore.</p>
+                                                    <div
+                                                        class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                                    </div>
+                                                    <span class="fw-600 alt-font  d-inline-block">Matthew
+                                                        taylor</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+
+                                        <div class="border-radius-10px bg-white box-shadow-double-large">
+                                            <div class="d-flex align-items-center p-40px md-p-25px">
+                                                <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px"
+                                                    src="images/avtar-24.jpg" alt />
+                                                <div>
+                                                    <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud
+                                                        dolore.</p>
+                                                    <div
+                                                        class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span
+                                                        class="fs-18 fw-600 alt-font  d-inline-block">Herman
+                                                        miller</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+
+                                        <div class="border-radius-10px bg-white box-shadow-double-large">
+                                            <div class="d-flex align-items-center p-40px md-p-25px">
+                                                <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px"
+                                                    src="images/avtar-26.jpg" alt />
+                                                <div>
+                                                    <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud
+                                                        dolore.</p>
+                                                    <div
+                                                        class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                                    </div>
+                                                    <span
+                                                        class="fs-18 fw-600 alt-font  d-inline-block">Jacob
+                                                        kalling</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14961.608814065663!2d72.91057698006598!3d20.366300078750275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ce47d36ac1cf%3A0x160e276063e27a55!2sFORTUNE%20LANDMARK%20BY%20FORTUNE%20DREAM-CON%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1717580931559!5m2!1sen!2sin"
+                width="1500" height="600" style="border: 0" allowfullscreen="true" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <script>
+                function openPdf() {
+                    window.open(`/<%= project.brochure %>`, "_blank");
+                }
+            </script>
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="/js/jquery.js"></script>
+            <script type="text/javascript" src="/js/vendors.min.js"></script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA56KqSJ11nQUw_tXgXyNMiPmQeM7EaSA&amp;callback=initMap"></script>
+            <script type="text/javascript" src="/js/main.js"></script>
+            </body>
+            <%- include('include/footer') %>
+    </body>

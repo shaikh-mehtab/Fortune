@@ -1,0 +1,107 @@
+<%- include('include/head') %> <% var blog = web_blog[0] %> <% var blogs=blogs%>
+<% var blogCategory = blogCategory %>
+
+<body class="custom-cursor overflow-x-hidden" data-mobile-nav-style="classic">
+  <div class="cursor-page-inner">
+    <div class="circle-cursor circle-cursor-inner"></div>
+    <div class="circle-cursor circle-cursor-outer"></div>
+  </div>
+
+  <%- include('include/header') %>
+
+  <section
+    class="ipad-top-space-margin page-title-big-typography bg-dark-gray cover-background background-position-center-bottom p-0"
+    style="
+      background-image: url('<% if(blog.cover_url) {%><%= API_IMG + JSON.parse(blog.cover_url) %><%} else {%> /frist.png <%} %>');
+    "
+  >
+    <div class="container">
+      <div
+        class="row align-items-end justify-content-center one-half-screen md-small-screen sm-extra-small-screen pb-9"
+      >
+        <div
+          class="col-lg-6 col-md-8 position-relative page-title-extra-small text-center"
+          data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <h1 class="mb-20px alt-font text-white fw-500 ls-minus-4px">
+            <span class="text-base-color"><%= blog.title %></span> reading
+          </h1>
+          <h2 class="text-white mb-0 text-uppercase ls-3px fw-600">
+            from fortune dream cone
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="bg-dark-gray background-position-center-top position-relative pt-0"
+    style="background-image: url('images/demo-architecture-dotted-pattern.svg')"
+  >
+    <div class="border border-color-transparent-white-light mb-6 mt-0">
+      <div class="container tab-style-08">
+        <ul
+          class="nav nav-tabs border-0 justify-content-center alt-font fs-20 md-fs-16 sm-fs-20 text-center active--bottom"
+        >
+          <% blogCategory.forEach(bc=>{%>
+          <li class="nav-item border-color-charcoal-grey">
+            <a
+              href="/blogs?category=<%= bc.cat_slug %>"
+              class="nav-link <% if(bc.cat_slug==curr_cat){ %>active <%}%>"
+              ><%= bc.name %><span class="bg-dark-gray"></span
+            ></a>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row blog-metro">
+        <div class="col-12">
+          <ul
+            class="blog-metro blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large"
+            data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+          >
+            <li class="grid-sizer"></li>
+            <% for (var i = 0; i < blogData.length; i++) { %>
+            <li class="grid-item text-white">
+              <figure class="position-relative mb-0 overflow-hidden">
+                <div class="blog-image bg-dark-slate-blue">
+                  <a
+                    href="/blog/<%= encodeURIComponent(blogData[i].blog_slug) %>"
+                  >
+                    <img
+                      src="<%= API_IMG + JSON.parse(blogData[i].list_image) %>"
+                    />
+                  </a>
+                  <div class="blog-overlay"></div>
+                </div>
+                <figcaption
+                  class="d-flex flex-column justify-content-end h-100 p-50px lg-p-25px"
+                >
+                  <div class="blog-categories mb-auto">
+                    <a
+                      href="/blog/<%= encodeURIComponent(blogData[i].blog_slug) %>"
+                      class="categories-btn bg-white text-dark-gray text-uppercase fw-700 ms-0 mb-auto align-self-start"
+                    >
+                      <%= blogData[i].tag %>
+                    </a>
+                  </div>
+                  <a
+                    href="/blog/<%= encodeURIComponent(blogData[i].blog_slug) %>"
+                    class="text-white card-title fs-22 fw-500"
+                  >
+                    <%= blogData[i].cover_title.slice(0,90) %>"
+                  </a>
+                </figcaption>
+              </figure>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+<%- include('include/footer') %>

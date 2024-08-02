@@ -1,0 +1,411 @@
+﻿
+ <%- include('include/head')  %>
+ <style>
+  .tab-content {
+    padding: 0px;
+    display: none;
+  }
+  .tab-link {
+    color: #ccc;
+  }
+
+  .nav-item {
+    padding: 0px;
+    border-radius: 0px;
+  }
+
+  .nav-tabs {
+    border: none;
+  }
+
+  .tab-link:hover {
+    color: #ccc;
+  }
+  .tab-content.active {
+    display: block;
+  }
+</style>
+
+    <body class="custom-cursor overflow-x-hidden" data-mobile-nav-style="classic">  
+        <!-- start cursor -->
+        <div class="cursor-page-inner">
+            <div class="circle-cursor circle-cursor-inner"></div>
+            <div class="circle-cursor circle-cursor-outer"></div>
+        </div>
+        <!-- end cursor -->
+        <!-- start header -->
+        <%- include('include/header') %>
+        <!-- end header -->
+        <!-- start page title -->
+        <section class="ipad-top-space-margin page-title-big-typography bg-dark-gray cover-background background-position-center-bottom p-0" 
+        style="background-image: url('/api/transform/<%= JSON.parse(page.cover_url) %>')">
+            <div class="container">
+                <div class="row align-items-end justify-content-center one-half-screen md-small-screen sm-extra-small-screen pb-9">
+                    <div class="col-lg-6 col-md-8 position-relative page-title-extra-small text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <h1 class="mb-20px alt-font text-white fw-500 ls-minus-4px"><span class="text-base-color"><%= page.title %></h1>
+                        <h2 class="text-white mb-0 text-uppercase ls-3px fw-600"><%= page.breadcumb_name %></h2>
+                    </div>
+                </div>
+                <div
+                class="row row-cols-1 row-cols-lg-1 row-cols-md-2 justify-content-center overlap-section z-index-1 overlap-section-three-fourth"
+                data-anime='{ "el": "childs", "willchange": "transform", "perspective": [1200,1200], "translateY": [0, 0], "scale": [1.1, 1], "rotateX": [30, 0], "opacity": [0,1], "duration": 1000, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+              >
+                <div class="col icon-with-text-style-04 transition-inner-all">
+                  <div
+                    class="bg-nero-grey h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover border-radius-5px"style="background-color:rgba(0,0,0,0.7)"
+                  >
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li style="padding: 0px" class="nav-item">
+                        <a
+                          style="border-radius: 0px"
+                          class="nav-link <% if(curr_data.parent_id != '2'){%>active<%} %> tab-link"
+                          data-tab="commercial"
+                          >Commercial</a
+                        >
+                      </li>
+                      <li style="padding: 0px" class="nav-item">
+                        <a
+                          style="border-radius: 0px"
+                          class="nav-link <% if(curr_data.parent_id == '2'){%>active<%} %> tab-link"
+                          data-tab="residential"
+                          >Residential</a
+                        >
+                      </li>
+                    </ul>
+                    <!-- Commercial Tab Content -->
+                    <div class="tab-content <% if(curr_data.parent_id != '2'){%>active<%} %>" id="commercial">
+                      <form class="contact-form-style-03 p-3" id="submitForm">
+                        <div class="row justify-content-center">
+                          <div class="col-md-6">
+                            <% var category_id = 0 %>
+                            <label
+                              for="commercialType"
+                              class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                              >Property Type</label
+                            >
+                            <div class="position-relative form-group mb-30px">
+                              <span class="form-icon"
+                                ><i class="bi-caret-down"></i
+                              ></span>
+                              <select
+                                class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                                name="category"
+                              >
+                                <option value="">
+                                  Select Property Type
+                                </option>
+        
+                                <% for(var j = 0; j < project_category.length; j++) { if
+                                ( project_category[j].parent_id == 1) { %>
+                                  <% if (curr_data.curr_cat && curr_data.parent_id =='1' && curr_data.curr_cat.cat_id == project_category[j].cat_id) { %>
+                                    <option value="<%= project_category[j].cat_id %>" selected>
+                                        <%= project_category[j].cat_title %>
+                                    </option>
+                                <% }else{ %>
+                                  <option value="<%= project_category[j].cat_id %>">
+                                    <%= project_category[j].cat_title %>
+                                </option>
+                                <%} }}%>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label
+                              for="commercialLocation"
+                              class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                              >Location</label
+                            >
+                            <div class="position-relative form-group mb-30px">
+                              <span class="form-icon"
+                                ><i class="bi-caret-down"></i
+                              ></span>
+                              <select
+                                class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                                name="location"
+                              >
+                                <option value="" selected>Select Location</option>
+                                <% project_location.forEach(function(location){%>
+                                  <% if(curr_data.curr_location && curr_data.parent_id =='1' && location.pl_id == curr_data.curr_location.pl_id){%>
+                                    <option value="<%= location.pl_id %>" selected>
+                                      <%= location.name %>
+                                    </option>
+                                  <%}else{%>
+                                    <option value="<%= location.pl_id %>">
+                                      <%= location.name %>
+                                    </option>
+                                  <%}}); %>
+                              </select>
+                            </div>
+                          </div>
+        
+                          <div class="col-md-4 text-center text-md-center">
+                            <input type="hidden" name="parent_id" value="1" />
+                            <button
+                              class="btn btn-small btn-base-color btn-box-shadow btn-round-edge-small primary-font fw-700 submit"
+                              id="submitbtn"
+                              type="submit"
+                            >
+                              Find Properties
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- Residential Tab Content -->
+                    <div class="tab-content <% if(curr_data.parent_id == '2'){%>active<%} %>" id="residential">
+                      <form id="submitForm2" class="contact-form-style-03 p-3">
+                        <div class="row justify-content-center">
+                          <div class="col-md-4">
+                            <label
+                              id="residentialType"
+                              class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                              >Property Type</label
+                            >
+                            <div class="position-relative form-group mb-30px">
+                              <span class="form-icon"
+                                ><i class="bi-caret-down"></i
+                              ></span>
+                              <select
+                                class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                                for="residentialType"
+                                name="category"
+                              >
+                                <option value="" >
+                                  Select Property Type
+                                </option>
+        
+                                <% for(var j = 0; j < project_category.length; j++) { if
+                                  ( project_category[j].parent_id == 2) { %>
+                                    <% if (curr_data.curr_cat && curr_data.parent_id =='2' && curr_data.curr_cat.cat_id == project_category[j].cat_id) { %>
+                                      <option value="<%= project_category[j].cat_id %>" selected>
+                                          <%= project_category[j].cat_title %>
+                                      </option>
+                                  <% }else{ %>
+                                    <option value="<%= project_category[j].cat_id %>">
+                                      <%= project_category[j].cat_title %>
+                                  </option>
+                                  <%} }}%>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <label
+                              id="bhk"
+                              class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                              >BHK Type</label
+                            >
+                            <div class="position-relative form-group mb-30px">
+                              <span class="form-icon"
+                                ><i class="bi-caret-down"></i
+                              ></span>
+                              <select
+                                class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                                for="bhk"
+                                name="sub_category"
+                              >
+                                <option value="" >
+                                  Select BHK Type
+                                </option>
+                                <% for(var j = 0; j < sub_category.length; j++) { 
+                                   if (curr_data.curr_sub_cat && curr_data.parent_id =='2' && curr_data.curr_sub_cat.sub_cat_id == sub_category[j].sub_cat_id) { %>
+                                      <option value="<%= sub_category[j].sub_cat_id %>" selected>
+                                          <%= sub_category[j].title %>
+                                      </option>
+                                  <% }else{ %>
+                                    <option value="<%= sub_category[j].sub_cat_id %>">
+                                      <%= sub_category[j].title %>
+                                  </option>
+                                  <%} }%>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <label
+                              id="residentiall"
+                              class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                              >Location</label
+                            >
+                            <div class="position-relative form-group mb-30px">
+                              <span class="form-icon"
+                                ><i class="bi-caret-down"></i
+                              ></span>
+                              <select
+                                class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                                for="residentiall"
+                                name="location"
+                              >
+                              <option value="" selected>Select Location</option>
+                              <% project_location.forEach(function(location){%>
+                                <% if(curr_data.curr_location && curr_data.parent_id =='2' && location.pl_id == curr_data.curr_location.pl_id){%>
+                                  <option value="<%= location.pl_id %>" selected>
+                                    <%= location.name %>
+                                  </option>
+                                <%}else{%>
+                                  <option value="<%= location.pl_id %>">
+                                    <%= location.name %>
+                                  </option>
+                                <%}}); %>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-4 text-center text-md-center">
+                            <input type="hidden" name="parent_id" value="2" />
+                            <button
+                              class="btn btn-small btn-base-color btn-box-shadow btn-round-edge-small primary-font fw-700 submit"
+                              id="submitbtn2"
+                              type="submit"
+                            >
+                              Find Properties
+                            </button>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-results mt-20px d-none"></div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="feature-box-overlay border-radius-6px"></div>
+                  </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- end page title --> 
+
+        <div
+        class="bg-dark-gray background-position-center-top position-relative"
+        style="
+          background-image: url('/images/demo-architecture-dotted-pattern.svg');
+        "
+      >
+
+      <section class="ps-6 pe-6 lg-ps-3 lg-pe-3 sm-ps-0 sm-pe-0">
+        <div class="container-fluid">
+          <div class="row mb-4">
+            <div class="col-12 ps-5 md-ps-15px md-mb-60px col-12 filter-content">
+              <ul
+                class="portfolio-simple portfolio-wrapper grid-loading grid grid-4col xxl-grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-1col xs-grid-1col gutter-extra-large text-center"
+                data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+              >
+                <li class="grid-sizer"></li>
+                <% projects.forEach(project=>{%>
+                    <li class="grid-item selected transition-inner-all">
+                      <div class="portfolio-box">
+                        <div class="portfolio-image bg-dark-gray">
+                          <a href="/project/<%=project.slug %>">
+                            <img src="/api/transform/<%= JSON.parse(project.listing_image)[0] %>" alt />
+                          </a>
+                        </div>
+                        <div
+                          class="portfolio-caption pt-35px pb-35px sm-pt-25px sm-pb-25px"
+                        >
+                          <a
+                            href="/project/<%=project.slug %>"
+                            class="text-white"
+                            ><%= project.title %></a
+                          >
+                          <span
+                            class="d-inline-block align-middle w-30px position-relative top-minus-2px separator-line-1px bg-charcoal-grey ms-15px me-15px"
+                          ></span>
+                          <a href="/projects?category=<%=project.cat_slug %>" class="d-inline-block"><%= project.cat_title %></a>
+                        </div>
+                      </div>
+                    </li>
+               <% }) %>
+  
+              </ul>
+            </div>
+          
+          </div>
+        </div>
+      </section>
+  
+
+        <!-- start footer -->
+        <%- include('include/footer') %>
+  <script>
+    document.querySelectorAll(".tab-link").forEach(function (tabLink) {
+      tabLink.addEventListener("click", function () {
+        var tabID = this.getAttribute("data-tab");
+
+        document.querySelectorAll(".tab-link").forEach(function (link) {
+          link.classList.remove("active");
+        });
+
+        document.querySelectorAll(".tab-content").forEach(function (content) {
+          content.classList.remove("active");
+        });
+
+        this.classList.add("active");
+        document.getElementById(tabID).classList.add("active");
+      });
+    });
+
+    $(document).ready(function () {
+      document
+        .getElementById("submitbtn")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          let form = document.getElementById("submitForm");
+          let formData = new FormData(form);
+          let jsonObject = {};
+
+          formData.forEach((value, key) => {
+            jsonObject[key] = value;
+          });
+
+          fetch("/api/search", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(jsonObject),
+          })
+            .then((data) => {
+              if (data.status) {
+                window.location.href = "/search";
+              }
+            })
+            .catch((error) => {
+              alert("Some error occurred: " + error.message);
+            });
+        });
+
+      document
+        .getElementById("submitbtn2")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          let form = document.getElementById("submitForm2");
+          let formData = new FormData(form);
+          let jsonObject = {};
+
+          formData.forEach((value, key) => {
+            jsonObject[key] = value;
+          });
+
+          fetch("/api/search", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(jsonObject),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.status) {
+                window.location.href = "/search";
+              } else if ((data.message = "Search Data Not Found")) {
+                alert("No data Found");
+              }
+            })
+            .catch((error) => {
+              alert("Some error occurred: " + error.message);
+            });
+        });
+    });
+  </script>
+    </body>
+</html>

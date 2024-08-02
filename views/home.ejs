@@ -1,0 +1,1166 @@
+﻿<%- include('include/head') %>
+<style>
+  .tab-content {
+    padding: 0px;
+    display: none;
+  }
+  .tab-link {
+    color: #ccc;
+  }
+
+  .nav-item {
+    padding: 0px;
+    border-radius: 0px;
+  }
+
+  .nav-tabs {
+    border: none;
+  }
+
+  .tab-link:hover {
+    color: #ccc;
+  }
+  .tab-content.active {
+    display: block;
+  }
+</style>
+<body data-mobile-nav-style="classic" class="custom-cursor">
+  <div class="cursor-page-inner">
+    <div class="circle-cursor circle-cursor-inner"></div>
+    <div class="circle-cursor circle-cursor-outer"></div>
+  </div>
+
+  <%- include('include/header') %>
+
+  <!-- slider -->
+  <section class="p-0 bg-dark-gray">
+    <article class="content">
+      <div
+        id="architecture-slider_wrapper"
+        class="rev_slider_wrapper fullwidthbanner-container"
+        style="background: #232323; padding: 0px"
+      >
+        <div
+          id="architecture-slider"
+          class="rev_slider fullwidthabanner"
+          data-version="5.4.5"
+        >
+          <ul>
+            <% sliders.forEach((slider,index) => { %>
+            <li
+              data-index="rs-architecture-<%= slider.slider_id %>"
+              data-transition="fadethroughdark"
+              data-slotamount="default"
+              data-hideafterloop="0"
+              data-hideslideonmobile="off"
+              data-easein="default"
+              data-easeout="default"
+              data-masterspeed="default"
+              data-thumb="http://works.themepunch.com/revolution_5_3/wp-content/"
+              data-rotate="0"
+              data-saveperformance="off"
+              data-title
+              data-param1
+              data-param2
+              data-param3
+              data-param4
+              data-param5
+              data-param6
+              data-param7
+              data-param8
+              data-param9
+              data-param10
+              data-description
+            >
+              <img
+                src="api/transform/<%= JSON.parse(slider.slider_image)[0] %>"
+                alt="slider-image"
+                data-bgposition="center center"
+                data-kenburns="on"
+                data-duration="2500"
+                data-ease="Power3.easeInOut"
+                data-scalestart="100"
+                data-scaleend="100"
+                data-rotatestart="0"
+                data-rotateend="0"
+                data-blurstart="10"
+                data-blurend="0"
+                data-offsetstart="100 100"
+                data-offsetend="0 0"
+                data-bgparallax="3"
+                class="rev-slidebg"
+                data-no-retina
+              />
+
+              <div id="rrzm_638" class="rev_row_zone rev_row_zone_middle">
+                <div
+                  class="tp-caption architecture-slider-text-row"
+                  id="slide-<%= slider.slider_id %>-layer-<%= slider.slider_id %>"
+                  data-x="['left','left','center','center']"
+                  data-hoffset="['0','0','0','0']"
+                  data-y="['bottom','middle','middle','middle']"
+                  data-voffset="['0','0','0','0']"
+                  data-width="none"
+                  data-height="none"
+                  data-whitespace="nowrap"
+                  data-type="row"
+                  data-columnbreak="2"
+                  data-responsive_offset="on"
+                  data-responsive="off"
+                  data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                  data-margintop="[370,200,200,0]"
+                  data-marginright="[0,0,0,0]"
+                  data-marginbottom="[150,0,0,0]"
+                  data-marginleft="[0,50,0,0]"
+                  data-textAlign="['left','left','center','center']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,50,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,50,0]"
+                >
+                  <div
+                    class="tp-caption"
+                    id="slide-<%= slider.slider_id %>-layer-<%= slider.slider_id+1 %>"
+                    data-x="['left','left','center','center']"
+                    data-hoffset="['0','0','0','0']"
+                    data-y="['bottom','middle','middle','middle']"
+                    data-voffset="['0','0','0','0']"
+                    data-width="none"
+                    data-height="none"
+                    data-whitespace="nowrap"
+                    data-type="column"
+                    data-responsive_offset="on"
+                    data-responsive="off"
+                    data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                    data-columnwidth="100%"
+                    data-verticalalign="top"
+                    data-margintop="[0,0,0,0]"
+                    data-marginright="[0,0,0,0]"
+                    data-marginbottom="[0,0,0,0]"
+                    data-marginleft="[0,0,0,0]"
+                    data-textAlign="['left','left','center','center']"
+                    data-paddingtop="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                  >
+                    <div
+                      class="tp-caption tp-resizeme alt-font"
+                      id="slide-<%= slider.slider_id %>-layer-<%= slider.slider_id+2 %>"
+                      data-frames='[{"delay":2200,"split":"chars","splitdelay":0.1,"speed":1500,"split_direction":"forward","frame":"0","style":"textAlign:inherit","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+                      data-visibility="['on', 'on', 'on', 'on']"
+                      data-fontsize="['170','150','160','120']"
+                      data-lineheight="['170','160','160','120']"
+                      data-fontweight="['500','700', '700','700']"
+                      data-color="['#FFF','#FFF','#fff','#fff']"
+                      data-textAlign="['left','left','center','center']"
+                      data-letterspacing="['-12','-8','-8','-6']"
+                      data-x="['left','left','center','center']"
+                      data-y="['middle','middle','middle','bottom']"
+                      data-hoffset="['0','0','0','0']"
+                      data-voffset="['0','0','0','0']"
+                      data-width="['700','700','100%','100%']"
+                      data-height="['auto','auto','auto','auto']"
+                      data-whitespace="['normal', 'normal', 'normal', 'normal']"
+                      data-margintop="[0, 0, 0, 0]"
+                      data-marginright="[0, 0, 0, 0]"
+                      data-marginbottom="[30, 50, 0, 0]"
+                      data-marginleft="[0, 0, 0, 0]"
+                      data-responsive_offset="off"
+                      data-responsive="on"
+                    >
+                      <%= slider.title %>
+                    </div>
+
+                    <a
+                      class="tp-caption text-uppercase text-white btn border-0 btn-switch-text left-icon d-table d-lg-inline-block"
+                      href="/project"
+                      id="slide-<%= slider.slider_id %>-layer-<%= slider.slider_id+4 %>"
+                      data-x="['left','left','center','center']"
+                      data-y="['middle','middle','middle','bottom']"
+                      data-hoffset="['0','0','0','0']"
+                      data-voffset="['0','0','0','0']"
+                      data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                      data-fontsize="['14','16','14','16']"
+                      data-lineheight="['42','55','50','55']"
+                      data-textAlign="['left','left','center','center']"
+                      data-width="['auto','auto','100%','100%']"
+                      data-height="['auto']"
+                      data-whitespace="['nowrap','nowrap','nowrap','nowrap']"
+                      data-fontweight="['500','700','700','700']"
+                      data-letterspacing="['1','1','1','1']"
+                      data-type="button"
+                      data-margintop="[0,0,50,40]"
+                      data-marginright="[0,0,0,0]"
+                      data-marginbottom="[0,0,0,0]"
+                      data-marginleft="[0,0,0,0]"
+                      data-responsive_offset="off"
+                      data-responsive="on"
+                      data-frames='[{"delay":"4000","speed":3000,"frame":"0","from":"x:50px;rY:0deg;opacity:0;fbr:200%;","to":"o:1;fbr:100;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"}]'
+                      ><span>
+                        <span
+                          class="border-radius-50 w-50px h-50px md-w-45px md-h-45px border border-2 border-color-white-color d-flex align-items-center justify-content-center me-10px"
+                          ><i class="fa-solid fa-arrow-right me-0 top-0"></i
+                        ></span>
+                        <span
+                          class="btn-double-text"
+                          data-text="Explore project"
+                          >Explore project</span
+                        >
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tp-caption tp-resizeme alt-font text-outline text-outline-width-2px text-outline-color-base-color architecture-number"
+                id="slide-<%= slider.slider_id %>-layer-<% slider.slider_id+5 %>"
+                data-whiteboard='{"hand_function":"draw","jitter_repeat":"0","jitter_distance":"0","jitter_offset":"0","jitter_distance_horizontal":"0","jitter_offset_horizontal":"0","hand_angle":"0","goto_next_layer":"on","hand_direction":"top_to_bottom"}'
+                data-frames='[{"from":"x:[100%];","mask":"x:[-100%];y:0%;s:inherit;e:inherit;","speed":2500,"to":"o:1;","delay":1500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power2.easeInOut"}]'
+                data-visibility="['on','off','off','off']"
+                data-fontsize="['200','150','200','120']"
+                data-lineheight="['220','360','300','200']"
+                data-fontweight="['700','700', '700','700']"
+                data-color="['#FFF','#FFF', '#000', '#000']"
+                data-textAlign="['left','center','center','center']"
+                data-letterspacing="['0','-5','-10','-8']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','bottom','bottom']"
+                data-hoffset="['230','120','0','0']"
+                data-voffset="['45','220','0','0']"
+                data-width="['500px', 'auto', 'auto', 'auto']"
+                data-height="['auto', 'auto', 'auto', 'auto']"
+                data-whitespace="['normal', 'nowrap', 'normal', 'normal']"
+                data-responsive_offset="off"
+                data-responsive="off"
+                data-basealign="slide"
+              >
+                <%= index+1%>
+              </div>
+
+              <div
+                class="tp-caption rev-btn d-flex justify-content-center align-items-center text-derk-gray btn btn-large bg-white btn-slide-right"
+                id="slide-<%= slider.slider_id %>-layer-<%= slider.slider_id+5 %>"
+                data-x="['right','right','center','center']"
+                data-hoffset="['0','0','40','40']"
+                data-y="['middle','middle','bottom','bottom']"
+                data-voffset="['60','60','0','0']"
+                data-width="['120','80','80','80']"
+                data-height="['120','80','80','80']"
+                data-whitespace="nowrap"
+                data-fontsize="['28','18','22','15']"
+                data-lineheight="['44','60','50','55']"
+                data-type="button"
+                data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+                data-responsive_offset="off"
+                data-responsive="off"
+                data-frames='[{"delay":4200,"speed":1000,"sfxcolor":"#ffffff","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"500","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgba(255,255,255,0);"}]'
+                data-textAlign="['center','center','center','center']"
+                data-basealign="slide"
+                style="border: none"
+              >
+                <i class="bi bi-arrow-right ms-0"></i>
+                <span class="bg-black"></span>
+              </div>
+
+              <div
+                class="tp-caption rev-btn alt-font bg-base-color text-black d-flex justify-content-center align-items-center text-derk-gray"
+                id="slide-<%= slider.slider_id %>-layer-<%= slider.slider_id+7 %>"
+                data-x="['right','right','center','center']"
+                data-hoffset="['120','80','-40','-40']"
+                data-y="['middle','middle','bottom','bottom']"
+                data-voffset="['60','60','0','00']"
+                data-width="['120','80','80','80']"
+                data-height="['120','80','80','80']"
+                data-whitespace="nowrap"
+                data-fontsize="['40','18','16','15']"
+                data-fontweight="['700','700','700','700']"
+                data-letterspacing="['-3','0','0','0']"
+                data-lineheight="['44','60','50','55']"
+                data-type="button"
+                data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+                data-responsive_offset="off"
+                data-responsive="off"
+                data-frames='[{"delay":4400,"style":"c:rgb(239,255,2);bc:rgb(239,255,2);","speed":1000,"sfxcolor":"#efff02","sfx_effect":"blockfromright","frame":"0","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"500","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(0,0,0);bc:rgb(0,0,0);"}]'
+                data-textAlign="['center','center','center','center']"
+                data-basealign="slide"
+              >
+                <%= index+2 %>
+              </div>
+            </li>
+            <%})%>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <div class="container">
+      <div
+        class="row row-cols-1 row-cols-lg-1 row-cols-md-2 justify-content-center overlap-section z-index-1 overlap-section-three-fourth"
+        data-anime='{ "el": "childs", "willchange": "transform", "perspective": [1200,1200], "translateY": [0, 0], "scale": [1.1, 1], "rotateX": [30, 0], "opacity": [0,1], "duration": 1000, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+      >
+        <div class="col icon-with-text-style-04 transition-inner-all">
+          <div
+            class="bg-nero-grey h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover border-radius-5px"style="background-color:rgba(0,0,0,0.8)"
+          >
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li style="padding: 0px" class="nav-item">
+                <a
+                  style="border-radius: 0px"
+                  class="nav-link active tab-link"
+                  data-tab="commercial"
+                  >Commercial</a
+                >
+              </li>
+              <li style="padding: 0px" class="nav-item">
+                <a
+                  style="border-radius: 0px"
+                  class="nav-link tab-link"
+                  data-tab="residential"
+                  >Residential</a
+                >
+              </li>
+            </ul>
+            <!-- Commercial Tab Content -->
+            <div class="tab-content active" id="commercial">
+              <form class="contact-form-style-03 p-3" id="submitForm">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <% var category_id = 0 %>
+                    <label
+                      for="commercialType"
+                      class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                      >Property Type</label
+                    >
+                    <div class="position-relative form-group mb-30px">
+                      <span class="form-icon"
+                        ><i class="bi-caret-down"></i
+                      ></span>
+                      <select
+                        class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                        name="category"
+                      >
+                        <option value="" disabled selected>
+                          Select Property Type
+                        </option>
+
+                        <% for(var j = 0; j < project_category.length; j++) { if
+                        ( project_category[j].parent_id == 1) { %>
+
+                        <option value="<%= project_category[j].cat_id %>">
+                          <%= project_category[j].cat_title %>
+                        </option>
+                        <% } %> <% }%>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label
+                      for="commercialLocation"
+                      class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                      >Location</label
+                    >
+                    <div class="position-relative form-group mb-30px">
+                      <span class="form-icon"
+                        ><i class="bi-caret-down"></i
+                      ></span>
+                      <select
+                        class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                        name="location"
+                      >
+                        <option value="" selected>Select Location</option>
+                        <% project_location.forEach(function(location) { %>
+
+                        <option value="<%= location.pl_id %>">
+                          <%= location.name %>
+                        </option>
+                        <% }); %>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 text-center text-md-center">
+                    <input type="hidden" name="parent_id" value="1" />
+                    <button
+                      class="btn btn-small btn-base-color btn-box-shadow btn-round-edge-small primary-font fw-700 submit"
+                      id="submitbtn"
+                      type="submit"
+                    >
+                      Find Properties
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- Residential Tab Content -->
+            <div class="tab-content" id="residential">
+              <form id="submitForm2" class="contact-form-style-03 p-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-4">
+                    <label
+                      id="residentialType"
+                      class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                      >Property Type</label
+                    >
+                    <div class="position-relative form-group mb-30px">
+                      <span class="form-icon"
+                        ><i class="bi-caret-down"></i
+                      ></span>
+                      <select
+                        class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                        for="residentialType"
+                        name="category"
+                      >
+                        <option value="" disabled selected>
+                          Select Property Type
+                        </option>
+
+                        <% for(var j = 0; j < project_category.length; j++) { %>
+                        <% if ( project_category[j].parent_id == 2) { %>
+
+                        <option value="<%= project_category[j].cat_id %>">
+                          <%= project_category[j].cat_title %>
+                        </option>
+                        <% } %> <% }%>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label
+                      id="bhk"
+                      class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                      >BHK Type</label
+                    >
+                    <div class="position-relative form-group mb-30px">
+                      <span class="form-icon"
+                        ><i class="bi-caret-down"></i
+                      ></span>
+                      <select
+                        class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                        for="bhk"
+                        name="sub_category"
+                      >
+                        <option value="" disabled selected>
+                          Select BHK Type
+                        </option>
+                        <% for(var j= 0; j < sub_category.length; j++) { %>
+
+                        <option value="<%= sub_category[j].sub_cat_id %>">
+                          <%= sub_category[j].title %> %>
+                        </option>
+
+                        <% }%>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label
+                      id="residentiall"
+                      class="form-label fs-11 ls-2px text-uppercase text-white mb-0"
+                      >Location</label
+                    >
+                    <div class="position-relative form-group mb-30px">
+                      <span class="form-icon"
+                        ><i class="bi-caret-down"></i
+                      ></span>
+                      <select
+                        class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control"
+                        for="residentiall"
+                        name="location"
+                      >
+                        <option value="" disabled selected>
+                          Select Location
+                        </option>
+                        <% for(var j = 0; j < project_location.length; j++) { %>
+
+                        <option value="<%= project_location[j].pl_id %>">
+                          <%= project_location[j].name %>
+                        </option>
+
+                        <% }%>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-center text-md-center">
+                    <input type="hidden" name="parent_id" value="2" />
+                    <button
+                      class="btn btn-small btn-base-color btn-box-shadow btn-round-edge-small primary-font fw-700 submit"
+                      id="submitbtn2"
+                      type="submit"
+                    >
+                      Find Properties
+                    </button>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-results mt-20px d-none"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="feature-box-overlay border-radius-6px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest projects -->
+  <section
+  class="bg-dark-gray background-position-center-top pb-0 "
+  style="background-image: url('images/demo-architecture-dotted-pattern.svg')"
+>
+  <div class="container">
+    <div class="row mb-8 xs-mb-10 -section">
+      <div class="col-12 position-relative">
+        <div
+          class="vertical-title-center align-items-center position-absolute top-0px left-15px bg-base-color p-10px xs-p-5px h-270px sm-h-190px z-index-9 w-50px xs-w-40px"
+        >
+          <div
+            class="title fs-14 ls-2px text-dark-gray fw-700 text-uppercase"
+          >
+            Latest projects
+          </div>
+        </div>
+        <div
+          class="swiper position-relative text-slider-style-04 magic-cursor drag-cursor"
+          data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "effect": "fade" }'
+        >
+          <div class="swiper-wrapper">
+            <% projects.forEach(project=>{ if(project.is_latest =="1"){ %>
+            <div class="swiper-slide">
+              <img
+                height="700"
+                width="1190"
+                src="/api/transform/<%= JSON.parse(project.gallery_images)[0] %>"
+                alt="<%= project.title %>"
+              />
+              <div
+                class="container position-absolute sm-position-relative bottom-0 right-0px z-index-1 swiper-slide-content"
+              >
+                <div class="row justify-content-end align-items-end h-100">
+                  <div class="col-lg-5 col-md-7 p-0">
+                    <div class="bg-white p-16 lg-p-12">
+                      <span
+                        class="text-dark-gray fs-15 text-uppercase ls-1px fw-700"
+                        >Architecture</span
+                      >
+                      <h2
+                        class="alt-font text-dark-gray fw-600 mb-20px ls-minus-2px"
+                      >
+                        <%= project.title %>
+                      </h2>
+                      <p class="w-90 mb-10px"><%= project.short_des %></p>
+                      <a
+                        href="/project/<%= project.slug %>"
+                        class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray fw-800"
+                      >
+                        <span>
+                          <span class="btn-text">Explore project</span>
+                          <span class="btn-icon"
+                            ><i class="fa-solid fa-arrow-right fs-14"></i
+                          ></span>
+                          <span class="btn-icon"
+                            ><i class="fa-solid fa-arrow-right fs-14"></i
+                          ></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <% }}) %>
+          </div>
+
+          <div
+            class="slider-one-slide-prev-1 icon-small swiper-button-prev slider-navigation-style-07 bg-dark-gray text-white box-shadow-small"
+          >
+            <i class="bi bi-arrow-down-left"></i>
+          </div>
+          <div
+            class="slider-one-slide-next-1 icon-small swiper-button-next slider-navigation-style-07 bg-dark-gray text-white box-shadow-small"
+          >
+            <i class="bi bi-arrow-up-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-2 row-cols-md-4 counter-style-04">
+      <% factFigure.forEach((fact,i)=>{ %>
+      <div class="col last-paragraph-no-margin sm-mb-30px text-center">
+        <h1
+          class="vertical-counter d-inline-flex alt-font text-white fw-300 mb-0"
+          data-text="<%= fact.symbol %>"
+          data-to="<%= fact.number %>"
+        ></h1>
+        <span
+          class="fs-13 text-base-color fw-600 d-block ls-2px text-uppercase"
+          ><%= fact.title %></span
+        >
+      </div>
+      <% })%>
+    </div>
+    <% if(testimonials.length >0){ %>
+    <div class="row justify-content-center">
+      <div
+        class="col-xl-9 col-lg-10 testimonials-style-10 position-relative ps-4 pe-4 swiper-number-pagination-progress"
+        data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+      >
+        <div
+          class="swiper magic-cursor pt-9 pb-6"
+          data-slider-options='{"slidesPerView": 1, "loop": true, "keyboard": { "enabled": true, "onlyInViewport": true }, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "pagination": { "el": ".swiper-number-line-pagination", "clickable": true }, "navigation": { "nextEl": ".swiper-button-next-nav", "prevEl": ".swiper-button-previous-nav", "effect": "fade" } }'
+          data-swiper-number-pagination-progress="true"
+        >
+          <div class="swiper-wrapper">
+            <% testimonials.forEach(testimonial=>{ %>
+
+            <div class="swiper-slide">
+              <div class="d-flex flex-column">
+                <div
+                  class="align-self-center text-center w-90 last-paragraph-no-margin"
+                >
+                  <h5 class="fw-100 lh-48 alt-font mb-0">
+                    <%= testimonial.description %>
+                    <span class="text-base-color"
+                      >- <%= testimonial.name %></span
+                    >
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <%})%>
+          </div>
+        </div>
+
+        <div
+          class="swiper-pagination-wrapper d-flex align-items-center justify-content-center"
+        >
+          <div class="number-prev fs-15 fw-600"></div>
+          <div class="swiper-pagination-progress bg-medium-gray">
+            <span class="swiper-progress"></span>
+          </div>
+          <div class="number-next fs-15 fw-600"></div>
+        </div>
+
+        <div
+          class="swiper-button-previous-nav swiper-button-prev icon-extra-medium left-0px"
+        >
+          <i class="bi bi-arrow-left icon-extra-medium text-white"></i>
+        </div>
+        <div
+          class="swiper-button-next-nav swiper-button-next icon-extra-medium right-0px"
+        >
+          <i class="bi bi-arrow-right icon-extra-medium text-white"></i>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+  <!-- fact figure year -->
+  <section
+    class="bg-dark-gray background-position-center-top overflow-hidden"
+    style="background-image: url('images/demo-architecture-dotted-pattern.svg')"
+  >
+    <div class="container">
+      <div class="row align-items-center mb-5 sm-mb-30px">
+        <div
+          class="col-lg-6 md-mb-50px sm-mb-40px text-center text-sm-start"
+          data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <!-- <img src="images/demo-architecture-signechar.png" alt /> -->
+          <h4 class="text-white fw-600 mt-20px mb-0 w-90 lg-w-100">
+            <%= home[0].title %>
+          </h4>
+        </div>
+        <div class="col-lg-6 last-paragraph-no-margin">
+          <div class="row align-items-center">
+            <div
+              class="col-xl-6 col-lg-5 col-sm-4 position-relative atropos transform-3d xs-mb-15px text-center text-sm-start text-lg-center"
+              data-anime='{ "translateY": [-15, 0], "scale": [0.8, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+            >
+              <div
+                class="atropos d-inline-block"
+                data-atropos
+                data-atropos-perspective="500"
+              >
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner text-center">
+                      <div
+                        data-atropos-offset="-5"
+                        class="position-relative left-0px right-0px top-50px lg-top-30px md-top-40px"
+                      >
+                        <% var currYear= new Date().getYear() %>
+                        <span
+                          class="fs-140 lg-fs-130 md-fs-150 text-dark-gray alt-font fw-700 position-absolute left-0px w-100 ls-minus-3px"
+                          ><%= currYear-103 %></span
+                        >
+                      </div>
+                      <span
+                        class="w-210px h-210px lg-w-150px lg-h-150px md-w-170px md-h-170px sm-w-150px sm-h-150px rounded-circle d-inline-block bg-base-color"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-xl-6 col-lg-7 col-sm-8 text-center text-sm-start"
+              data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+            >
+              <span
+                class="fs-14 text-uppercase ls-1px text-white fw-600 d-block mb-5px"
+                >Established for <%= currYear - 103 %> years.</span
+              >
+              <p class="w-90 lg-w-100"><%- home[0].description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row row-cols-1 row-cols-lg-3 justify-content-center"
+        data-anime='{ "el": "childs", "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+      >
+        <% factFigure.forEach((fact,i)=>{ %>
+        <div class="col icon-with-text-style-01 pe-5 md-mb-30px">
+          <div
+            class="separator-line-1px bg-charcoal-grey w-100 mb-25px d-none d-lg-block"
+          ></div>
+          <div
+            class="feature-box feature-box-left-icon last-paragraph-no-margin"
+          >
+            <div class="feature-box-content">
+              <span class="text-medium-gray fs-18 lh-30 w-80 sm-w-90 d-block"
+                ><span class="text-white fw-600"
+                  ><%= fact.number %><%= fact.symbol %></span
+                >
+                <%= fact.title %></span
+              >
+            </div>
+            <div class="feature-box-icon me-0">
+              <span class="fs-18 mb-0 fw-500 text-base-color"><%= i+1 %></span>
+            </div>
+          </div>
+        </div>
+        <% })%>
+      </div>
+    </div>
+  </section>
+
+  <!-- video section -->
+  <section
+    class="p-0 bg-dark-gray background-position-center-top overflow-hidden"
+    style="background-image: url('images/demo-architecture-dotted-pattern.svg')"
+  >
+    <div class="container-fluid p-0">
+      <div
+        class="row g-0 align-items-center h-500px md-h-450px sm-h-auto"
+        data-bottom-top="transform: translate3d(-30px, 0px, 0px);"
+        data-top-bottom="transform: translate3d(-110px, 0px, 0px);"
+      >
+        <div
+          class="col-md-6 cover-background h-100 sm-h-400px xs-h-350px"
+          style="background-image: url('/images/home-02.jpg')"
+        ></div>
+        <div
+          class="col-lg-4 col-md-6 position-relative bg-nero-grey h-100 sm-h-350px sm-pb-8 overflow-hidden"
+        >
+          <div
+            class="h-100 d-flex flex-column align-items-center justify-content-center"
+          >
+            <a
+              href="/project"
+              class="position-relative border border-2 border-color-base-color d-inline-block text-center rounded-circle video-icon-box video-icon-large popup-youtube mb-10px"
+            >
+              <span>
+                <span class="video-icon">
+                  <i class="fa-solid fa-play text-base-color"></i>
+                </span>
+              </span>
+            </a>
+            <h2
+              class="fs-60 alt-font fw-500 text-center w-50 xl-w-80 ls-minus-2px"
+            >
+              we create <span class="text-white">modernity</span>
+            </h2>
+            <div
+              class="position-absolute bottom-minus-20px left-0px right-0px text-center w-100 fs-140 sm-fs-160 xs-fs-110 ls-minus-3px opacity-1 word-break-normal text-outline text-outline-color-white alt-font"
+              data-bottom-top="transform:scale(1.6, 1.6)"
+              data-top-bottom="transform:scale(1, 1)"
+            >
+              DreamCon
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- project -->
+  <section
+    class="bg-dark-gray background-position-center-top mb-0 overflow-hidden"
+    style="background-image: url('images/demo-architecture-dotted-pattern.svg')"
+  >
+    <div class="container">
+      <div class="row align-items-end mb-6">
+        <div
+          class="col-md-6 sm-mb-20px"
+          data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <span
+            class="text-base-color fs-12 fw-600 ls-3px text-uppercase mb-5px d-block"
+            ><%= home[0].project_small_title %></span
+          >
+          <h4 class="text-white fw-600 mb-0"><%= home[0].project_main_title %></h4>
+        </div>
+        <div
+          class="col-md-5 offset-md-1 last-paragraph-no-margin"
+          data-anime='{ "translateX": [-50, 0], "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <p class="w-80 xl-w-85 lg-w-100">
+            <%= home[0].project_desc %>
+        </div>
+      </div>
+      <div class="row align-items-center mb-9">
+        <div
+          class="col-md-12 position-relative"
+          data-anime='{ "translateX": [150, 0], "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <div class="outside-box-right-30 sm-outside-box-right-0">
+            <div
+              class="swiper slider-three-slide magic-cursor drag-cursor"
+              data-slider-options='{ "slidesPerView": 1, "spaceBetween": 35, "loop": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "pagination": { "el": ".slider-four-slide-pagination-1", "clickable": true, "dynamicBullets": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 4 }, "992": { "slidesPerView": 3 }, "768": { "slidesPerView": 3 }, "320": { "slidesPerView": 1 } }, "effect": "slide" }'
+            >
+              <div class="swiper-wrapper">
+                <% projects.forEach((project,i)=>{%>
+                <div class="swiper-slide">
+                  <div class="interactive-banner-style-06">
+                    <div class="interactive-banners-image">
+                      <img
+                        src="/api/transform/<%= JSON.parse(project.listing_image)[0] %>"
+                        alt
+                      />
+                      <div
+                        class="overlay-bg bg-gradient-dark-transparent opacity-light"
+                      ></div>
+                      <a
+                        href="/project/<%= project.slug%>"
+                        class="banners-icon text-white icon-hover-base-color position-absolute top-60px left-60px lg-top-30px lg-left-30px"
+                      >
+                        <i class="line-icon-Structure icon-large"></i>
+                      </a>
+                    </div>
+                    <div class="interactive-banners-content p-60px lg-p-30px">
+                      <div class="h-100 w-100 last-paragraph-no-margin">
+                        <a
+                          href="/project/<%= project.slug%>"
+                          class="fs-22 d-block text-white mb-10px fw-500"
+                          ><%= project.title %></a
+                        >
+                        <p
+                          class="interactive-banners-content-text w-95 lg-w-100"
+                        >
+                          <%= project.short_des.slice(0,70) %>...
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box-overlay bg-gradient-dark-transparent"></div>
+                  </div>
+                </div>
+
+                <% }) %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark-gray">
+    <div class="container bg-dark-gray">
+      <div class="row justify-content-center bg-dark-gray mb-40px sm-mb-30px">
+        <div
+          class="col-lg-5 text-center"
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <h4 class="alt-font text-dark-gray fw-700 mb-20px text-white">
+            Our Associates
+          </h4>
+        </div>
+      </div>
+      <div
+        class="row position-relative clients-style-08"
+        data-anime='{ "el": "childs", "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 150, "easing": "easeOutQuad" }'
+      >
+        <div
+          class="col swiper text-center feather-shadow"
+          data-slider-options='{ "slidesPerView": 1, "spaceBetween":0, "speed": 3000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false, "pauseOnMouseEnter": false}, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 4 }, "992": { "slidesPerView": 3 }, "768": { "slidesPerView": 3 }, "576": { "slidesPerView": 2 } }, "effect": "slide" }'
+        >
+          <div class="swiper-wrapper marquee-slide">
+            <% associate.forEach(ass=>{ %>
+
+            <div class="swiper-slide">
+              <div class="fs-32 text-dark-gray alt-font fw-700 ls-minus-1px">
+                <!-- <span
+                class="w-15px h-15px border border-2 border-radius-100 border-color-medium-gray d-inline-block align-middle ms-50px me-50px"
+                ></span> -->
+              </div>
+              <img
+                src="api/transform/<%= JSON.parse(ass.logo) %>"
+                height="65"
+                with="66"
+                data-bottom-top="transform: translateY(-20px)"
+                data-top-bottom="transform: translateY(20px)"
+                alt="associates Image"
+              />
+            </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="bg-nero-grey overlap-height background-position-center-top"
+    style="background-image: url('images/demo-architecture-dotted-pattern.svg')"
+  >
+    <div class="container overlap-gap-section">
+      <div class="row">
+        <div class="col-lg-4">
+          <div
+            class="position-relative"
+            data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+          >
+            <span
+              class="text-base-color fs-12 fw-600 ls-3px text-uppercase mb-5px d-block"
+              >Awards and Recognitions</span
+            >
+            <h4 class="text-white fw-600 mb-20px">
+              These awards reflect the hard work.
+            </h4>
+            <p>
+              Our buildings combine minimalism & elegance of lines and shapes.
+              We want them to be an integral part of the surrounding landscape.
+            </p>
+          </div>
+        </div>
+        <div
+          class="col-lg-7 offset-lg-1 last-paragraph-no-margin"
+          data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <% awards.forEach(award=>{ %>
+          <div
+            class="row align-items-center pt-25px pb-25px border-bottom border-color-charcoal-grey g-0 position-relative sm-pe-40px"
+          >
+            <div class="col-md-2">
+              <span class="fw-600 text-base-color"
+                ><%= new Date(award.date).toLocaleDateString() %></span
+              >
+            </div>
+            <div class="col-md-6">
+              <span class="text-white fw-500 fs-17"><%= award.title %></span>
+            </div>
+            <div class="col-md-3">
+              <span class="fw-500">Architecture</span>
+            </div>
+            <div class="col-auto col-md-1 sm-position-absolute right-0px">
+              <a href="#"><i class="bi bi-arrow-right text-white"></i></a>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section
+    class="half-section bg-dark-gray background-position-center-top overflow-hidden position-relative"
+    style="background-image: url('images/demo-architecture-dotted-pattern.svg')"
+  >
+    <div
+      class="fw-600 alt-font fs-180 md-fs-150 sm-fs-130 xs-fs-100 text-charcoal ls-minus-7px md-ls-minus-5px xs-ls-minus-2px text-nowrap text-center mb-20px"
+      data-bottom-top="transform: translate3d(100px, 0px, 0px) scale(1.5, 1.5);"
+      data-top-bottom="transform: translate3d(-200px, 0px, 0px) scale(.7, .7);"
+    >
+      <span class="text-outline text-outline-color-white opacity-1"
+        >Fortune</span
+      >
+      Dream
+      <span class="text-outline text-outline-color-white opacity-1">-</span>
+      Con
+    </div>
+
+    <div
+      class="position-absolute right-18 md-right-0 top-minus-50px sm-top-minus-20px sm-w-220px xs-w-190px z-index-9"
+      data-anime='{ "translateY": [0, 0], "scale": [0.8, 1], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'
+    >
+      <img
+        src="images/demo-architecture-home-11.png"
+        class="animation-rotation"
+        alt
+      />
+      <div class="absolute-middle-center w-100 z-index-minus-1">
+        <img src="images/demo-architecture-home-12.png" alt />
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="bg-dark-gray background-position-center-top position-relative pt-0"
+    style="background-image: url('images/demo-architecture-dotted-pattern.svg')"
+  >
+    <div class="container">
+      <div
+        class="row align-items-center justify-content-center text-center mb-2 sm-mb-5"
+      >
+        <div
+          class="col-md-6"
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <span
+            class="text-base-color fs-12 fw-600 ls-3px text-uppercase d-inline-block"
+            >Architecture news</span
+          >
+          <h4 class="text-white fw-600">Latest Blogs</h4>
+        </div>
+      </div>
+      <div class="row blog-metro mb-6">
+        <div class="col-12">
+          <ul
+            class="blog-metro blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large"
+            data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+          >
+            <li class="grid-sizer"></li>
+            <% blogs.forEach((blog,i)=>{ if(i<3){ %>
+
+            <li class="grid-item text-white">
+              <figure class="position-relative mb-0 overflow-hidden">
+                <div class="blog-image bg-dark-slate-blue">
+                  <a href="/blog/<%= blog.blog_slug %>"
+                    ><img
+                      src="/api/transform/<%= JSON.parse(blog.list_image)[0] %>"
+                      alt="<%= blog.blog_name %>"
+                  /></a>
+                  <div class="blog-overlay"></div>
+                </div>
+                <figcaption
+                  class="d-flex flex-column justify-content-end h-100 p-50px lg-p-25px"
+                >
+                  <div class="blog-categories mb-auto">
+                    <a
+                      href="/blogs"
+                      class="categories-btn bg-white text-dark-gray text-uppercase fw-700 ms-0 mb-auto align-self-start"
+                      ><%= blog.blog_category_name %></a
+                    >
+                  </div>
+                  <a
+                    href="/blog/<%= encodeURIComponent(blog.blog_slug) %>"
+                    class="text-white card-title fs-17 fw-500"
+                    ><%= blog.cover_title.slice(0,70)%>"</a
+                  >
+                </figcaption>
+              </figure>
+            </li>
+
+            <% }}) %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="position-absolute bottom-minus-50px lg-bottom-minus-40px md-bottom-minus-25px sm-bottom-minus-20px xs-bottom-minus-10px left-0px right-0px text-center w-100 fs-200 lg-fs-160 md-fs-140 sm-fs-120 xs-fs-90 fw-600 text-nero-grey ls-minus-4px"
+    >
+      Fortune
+    </div>
+  </section>
+  <%- include('include/footer') %>
+  <script>
+    document.querySelectorAll(".tab-link").forEach(function (tabLink) {
+      tabLink.addEventListener("click", function () {
+        var tabID = this.getAttribute("data-tab");
+
+        document.querySelectorAll(".tab-link").forEach(function (link) {
+          link.classList.remove("active");
+        });
+
+        document.querySelectorAll(".tab-content").forEach(function (content) {
+          content.classList.remove("active");
+        });
+
+        this.classList.add("active");
+        document.getElementById(tabID).classList.add("active");
+      });
+    });
+
+    $(document).ready(function () {
+      document
+        .getElementById("submitbtn")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          let form = document.getElementById("submitForm");
+          let formData = new FormData(form);
+          let jsonObject = {};
+
+          formData.forEach((value, key) => {
+            jsonObject[key] = value;
+          });
+
+          fetch("/api/search", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(jsonObject),
+          })
+            .then((data) => {
+              if (data.status) {
+                window.location.href = "/projects";
+              }
+            })
+            .catch((error) => {
+              alert("Some error occurred: " + error.message);
+            });
+        });
+
+      document
+        .getElementById("submitbtn2")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          let form = document.getElementById("submitForm2");
+          let formData = new FormData(form);
+          let jsonObject = {};
+
+          formData.forEach((value, key) => {
+            jsonObject[key] = value;
+          });
+
+          fetch("/api/search", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(jsonObject),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.status) {
+                window.location.href = "/projects";
+              } else if ((data.message = "Search Data Not Found")) {
+                alert("No data Found");
+              }
+            })
+            .catch((error) => {
+              alert("Some error occurred: " + error.message);
+            });
+        });
+    });
+  </script>
+</body>
